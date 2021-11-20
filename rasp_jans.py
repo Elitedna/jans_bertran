@@ -8,7 +8,7 @@ from secret import google_geo_coder
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-def api_call(zip_code):
+def api_call(zip_code: str) -> str:
     """takes inputted zip code calls upon googles geocoding api to receive location details"""
     URL = f"https://maps.googleapis.com/maps/api/geocode/json?address={str(zip_code)}&key={google_geo_coder}"
     payload = {}
